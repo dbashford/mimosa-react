@@ -15,7 +15,7 @@ var compile = function ( mimosaConfig, file, cb ) {
   }
 
   try {
-    output = mimosaConfig.react.lib.transform( text );
+    output = mimosaConfig.react.lib.transform( text, mimosaConfig.react.options );
   } catch ( err ) {
     error = err;
   }
