@@ -8,19 +8,23 @@ var config = require( "./config" )
 var compile = function ( mimosaConfig, file, cb ) {
   var output
     , error
-    , text = file.inputFileText;
+    , mapText;
 
-  if ( text.indexOf( "@jsx React.DOM" ) === -1 ) {
-    text = "/** @jsx React.DOM */\n" + text;
+  if ( file.inputFileText.indexOf( "@jsx React.DOM" ) === -1 ) {
+    file.inputFileText = "/** @jsx React.DOM */\n" + file.inputFileText;
   }
 
   try {
-    output = mimosaConfig.react.lib.transform( text, mimosaConfig.react.options );
+    output = mimosaConfig.react.lib.transformWithDetails( file.inputFileText, mimosaConfig.react.options );
   } catch ( err ) {
     error = err;
   }
 
-  cb( error, output );
+  if ( output.sourceMap ) {
+    mapText = JSON.stringify( output.sourceMap );
+  }
+
+  cb( error, output.code, mimosaConfig.react, mapText );
 };
 
 module.exports = {
