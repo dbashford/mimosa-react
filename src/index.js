@@ -1,7 +1,7 @@
 "use strict";
 
 var config = require( "./config" )
-  , getExtensions = function ( mimosaConfig ) {
+  , extensions = function ( mimosaConfig ) {
     return mimosaConfig.react.extensions;
   };
 
@@ -27,8 +27,7 @@ module.exports = {
   name: "react",
   compilerType: "javascript",
   compile: compile,
-  extensions: getExtensions,
+  extensions: extensions,
   defaults: config.defaults,
-  placeholder: config.placeholder,
   validate: config.validate
 };
