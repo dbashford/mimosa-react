@@ -1,6 +1,6 @@
 {
   "name": "mimosa-react",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "homepage": "https://github.com/dbashford/mimosa-react",
   "author": "David Bashford",
   "description": "A JSX/React compiler for Mimosa",
