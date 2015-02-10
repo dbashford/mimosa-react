@@ -10,10 +10,6 @@ var compile = function ( mimosaConfig, file, cb ) {
     , error
     , mapText;
 
-  if ( file.inputFileText.indexOf( "@jsx React.DOM" ) === -1 ) {
-    file.inputFileText = "/** @jsx React.DOM */\n" + file.inputFileText;
-  }
-
   try {
     output = mimosaConfig.react.lib.transformWithDetails( file.inputFileText, mimosaConfig.react.options );
   } catch ( err ) {
