@@ -13,7 +13,7 @@ Add `'react'` to your list of modules.  That's all!  Mimosa will install the mod
 
 ## Functionality
 
-This module will compile your React/JSX files.  It will also prepend the necessary `/** @jsx React.DOM */` comment so that you do not need to.
+This module will compile your React/JSX files.
 
 This module supports source maps and includes them during `mimosa watch` by default.  Source maps are disabled for `mimosa build`.
 
