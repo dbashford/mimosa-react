@@ -17,6 +17,8 @@ This module will compile your React/JSX files.
 
 This module supports source maps and includes them during `mimosa watch` by default.  Source maps are disabled for `mimosa build`.
 
+Note: As of `1.3.0` this module no longer prepends the JSX pragma.
+
 ## Default Config
 
 ```javascript
