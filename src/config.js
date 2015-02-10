@@ -12,16 +12,6 @@ exports.defaults = function() {
   };
 };
 
-exports.placeholder = function() {
-  return "\t\n\n" +
-         "  react:                     # config settings for the react compiler module\n" +
-         "    lib: undefined           # use this property to provide a specific version of react-tools\n" +
-         "    extensions: [\"jsx\"]  # default extensions for React/JSX files\n" +
-         "    options:                 # options to pass to the react compiler\n" +
-         "      harmony: false         # default harmony setting\n" +
-         "      sourceMap: true        # whether or not to use source maps";
-};
-
 exports.validate = function(config, validators) {
   var errors = [];
 
