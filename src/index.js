@@ -6,7 +6,7 @@ var config = require( "./config" )
   };
 
 var compile = function ( mimosaConfig, file, cb ) {
-  var output
+  var output = {}
     , error
     , mapText;
 
